@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+.vscode/
+
+# Node.js
+node_modules/
+.env
+
+# Expo
+.expo/
+
+# Build output
+build/
+dist/
+*.apk
+*.ipa
+
+# Systemowe
+.DS_Store
+Thumbs.db
