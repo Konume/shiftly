@@ -38,7 +38,7 @@
 
 * Factory do tworzenia różnych typów użytkowników (Pracownik, Menedżer)
 * Extension method do formatowania godzin zmian dla kalendarza
-* Możliwe użycie refleksji w backendzie .NET (jeśli backend nie będzie tylko Node.js)
+* Możliwe użycie refleksji w backendzie .NET ]
 
 ---
 
@@ -62,9 +62,8 @@
 
 * **Frontend (Mobile)**: React Native (Expo)
 * **UI/UX**: UxPin (prototyp interfejsu)
-* **Backend**: Node.js / Express lub .NET (dla wzorców + refleksji)
-* **Baza danych**: Azure Cosmos DB (MongoDB API) lub Azure SQL
-* **Autentykacja**: Azure AD B2C lub Firebase Auth
+* **Backend**: .NET (dla wzorców + refleksji)
+* **Baza danych**: Azure Cosmos DB (MongoDB API) 
 
 ---
 
