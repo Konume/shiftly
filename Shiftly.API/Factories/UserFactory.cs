@@ -5,12 +5,12 @@ namespace ShiftlyAPI.Factories
 {
 	public static class UserFactory
 	{
-		public static IUserRole CreateUser(string role)
+		public static IUser CreateUser(string type, string name, string email)
 		{
-			return role switch
+			return type switch
 			{
-				"Employee" => new Employee(),
-				"Manager" => new Manager(),
+				"Employee" => new Employee { Name = name, Email = email },
+				"Manager" => new Manager { Name = name, Email = email },
 				_ => throw new ArgumentException("Unknown role")
 			};
 		}
