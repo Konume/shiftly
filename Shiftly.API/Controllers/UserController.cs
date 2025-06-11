@@ -18,9 +18,9 @@ namespace Shiftly.API.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> CreateUser(string type, string name, string email)
+        public async Task<IActionResult> CreateUser(string role, string name, string email)
         {
-            User user = UserFactory.CreateUser(type, name, email);
+            User user = UserFactory.CreateUser(role, name, email);
 
             // Example notification
             await _notifier.NotifyUserAsync(user.Email, "Welcome to Shiftly!");
