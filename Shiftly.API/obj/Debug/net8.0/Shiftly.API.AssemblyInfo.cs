@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shiftly.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aed5d1540ac6f9b0ebaaeacf394dab4686dc831b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9603feb913b86ae8c17fb92ebe0b7e1f258b9b10")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shiftly.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shiftly.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
