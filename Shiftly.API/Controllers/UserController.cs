@@ -1,31 +1,37 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Shiftly.Core.Factories;
-using Shiftly.Infrastructure.Notifications;
-using Shiftly.Core.Models;
+using System;
 using System.Threading.Tasks;
 
-namespace Shiftly.API.Controllers
+namespace Shiftly.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("users")]
     public class UserController : ControllerBase
     {
-        private readonly ServiceBusNotifier _notifier;
+        [Authorize(Roles = "Manager")]
+        [HttpGet]
+        public IActionResult GetAllUsers() => Ok();
 
-        public UserController(ServiceBusNotifier notifier)
-        {
-            _notifier = notifier;
-        }
+        [Authorize]
+        [HttpGet("{id}")]
+        public IActionResult GetUserById(Guid id) => Ok();
 
+        [Authorize]
+        [HttpPost]
         [HttpPost("create")]
-        public async Task<IActionResult> CreateUser(string role, string name, string email)
+        public async Task<IActionResult> CreateUser(string type, string name, string email)
         {
-            User user = UserFactory.CreateUser(role, name, email);
-
-            // Example notification
-            await _notifier.NotifyUserAsync(user.Email, "Welcome to Shiftly!");
-
+            var user = UserFactory.CreateUser(type, name, email);
+            await _notifier.SendNotificationAsync(new { User = user, Message = "User created!" });
             return Ok(user);
-        }
+
+            [Authorize]
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(Guid id, [FromBody] UserDto dto) => Ok();
+
+        [Authorize]
+        [HttpDelete("{id}")]
+        public IActionResult DeleteUser(Guid id) => Ok();
     }
 }

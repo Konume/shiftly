@@ -1,31 +1,22 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Shiftly.Core.Factories;
-using Shiftly.Infrastructure.Notifications;
-using Shiftly.Core.Models;
-using System.Threading.Tasks;
 
-namespace Shiftly.API.Controllers
+namespace Shiftly.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("uploads")]
     public class UploadsController : ControllerBase
     {
-        private readonly ServiceBusNotifier _notifier;
-
-        public UploadsController(ServiceBusNotifier notifier)
+        [Authorize]
+        [HttpPost("avatar")]
+        public IActionResult UploadAvatar(IFormFile file)
         {
-            _notifier = notifier;
-        }
+            if (file == null || file.Length == 0)
+                return BadRequest("Invalid file.");
 
-        [HttpPost("create")]
-        public async Task<IActionResult> CreateUser(string role, string name, string email)
-        {
-            User user = UserFactory.CreateUser(role, name, email);
-
-            // Example notification
-            await _notifier.NotifyUserAsync(user.Email, "Welcome to Shiftly!");
-
-            return Ok(user);
+            // Upload logic placeholder
+            return Ok("File uploaded.");
         }
     }
 }
