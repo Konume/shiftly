@@ -1,6 +1,6 @@
 ### 📱 Projekt: "Shiftly – System Zarządzania Grafikami Pracy"
 
-#### 👥 Zespół: do 3 osób
+
 
 #### 🎯 Cel: Mobilna aplikacja dla pracowników i menedżerów umożliwiająca zarządzanie grafikami zmianowymi, urlopami oraz komunikacją zespołu
 
