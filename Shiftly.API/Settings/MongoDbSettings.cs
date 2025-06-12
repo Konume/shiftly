@@ -1,8 +1,13 @@
-namespace Shiftly.API.Settings
+using Microsoft.Extensions.Options;
+using Shiftly.API.Settings;
+
+public class MongoService
 {
-	public class MongoDbSettings
+	private readonly IMongoDatabase _database;
+
+	public MongoService(IOptions<MongoDbSettings> settings)
 	{
-		public string ConnectionString { get; set; } = null!;
-		public string DatabaseName { get; set; } = null!;
+		var client = new MongoClient(settings.Value.ConnectionString);
+		_database = client.GetDatabase(settings.Value.DatabaseName);
 	}
 }
