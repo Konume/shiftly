@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Shiftly.API.Models;
 
 namespace Shiftly.Controllers
 {
@@ -18,11 +19,11 @@ namespace Shiftly.Controllers
 
         [Authorize(Roles = "Manager")]
         [HttpPost]
-        public IActionResult CreateShift([FromBody] ShiftDto dto) => Ok();
+        public IActionResult CreateShift([FromBody] Shift dto) => Ok();
 
         [Authorize]
         [HttpPut("{id}")]
-        public IActionResult UpdateShift(Guid id, [FromBody] ShiftDto dto) => Ok();
+        public IActionResult UpdateShift(Guid id, [FromBody] Shift dto) => Ok();
 
         [Authorize]
         [HttpDelete("{id}")]

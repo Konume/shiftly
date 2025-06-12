@@ -1,9 +1,14 @@
-DotNetEnv.Env.Load();
+
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using ShiftlyAPI.Repositories;
-using ShiftlyAPI.Settings;
+//using ShiftlyAPI.Repositories;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Shiftly.API.Settings;
 
+
+DotNetEnv.Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
 // Konfiguracja z pliku + zmienne œrodowiskowe
@@ -24,11 +29,13 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
 
 
 // Dodanie repozytoriów (mo¿esz stworzyæ interfejsy i implementacje)
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IShiftRepository, ShiftRepository>();
-builder.Services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
-builder.Services.AddScoped<ISwapRequestRepository, SwapRequestRepository>();
-builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+//builder.Services.AddScoped<IUserRepository, UserRepository>();
+//builder.Services.AddScoped<IShiftRepository, ShiftRepository>();
+//builder.Services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+//builder.Services.AddScoped<ISwapRequestRepository, SwapRequestRepository>();
+//builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+//builder.Services.AddScoped<INotifier, Notifier>();
+
 
 // Kontrolery + Swagger
 builder.Services.AddControllers();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\Shiftly.API.csproj": {}
+    "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\Shiftly.API.csproj": {}
   },
   "projects": {
-    "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\Shiftly.API.csproj": {
+    "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\Shiftly.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\Shiftly.API.csproj",
+        "projectUniqueName": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\Shiftly.API.csproj",
         "projectName": "Shiftly.API",
-        "projectPath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\Shiftly.API.csproj",
+        "projectPath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\Shiftly.API.csproj",
         "packagesPath": "C:\\Users\\zmsz0\\.nuget\\packages\\",
-        "outputPath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\obj\\",
+        "outputPath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

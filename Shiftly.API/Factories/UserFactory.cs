@@ -1,7 +1,7 @@
-using ShiftlyAPI.Models;
+using Shiftly.API.Models;
 using System;
 
-namespace ShiftlyAPI.Factories
+namespace Shiftly.API.Factories
 {
     public static class UserFactory
     {

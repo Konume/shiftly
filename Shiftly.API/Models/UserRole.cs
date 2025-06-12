@@ -1,11 +1,11 @@
-namespace ShiftlyAPI.Models
+namespace Shiftly.API.Models
 {
     public interface IUser
     {
         string UserId { get; set; }
         string Name { get; set; }
         string Email { get; set; }
-        public abstract string Role { get; }
+        string Role { get; }
         string GetPermissions();
     }
 
@@ -14,7 +14,7 @@ namespace ShiftlyAPI.Models
         public string UserId { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
         public string Email { get; set; }
-        public override string Role { get; set; } = "Employee";
+        public string Role { get; set; } = "Employee";
         public string GetPermissions() => "View Shifts";
     }
 
@@ -23,7 +23,7 @@ namespace ShiftlyAPI.Models
         public string UserId { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
         public string Email { get; set; }
-        public override string Role { get; set; } = "Manager";
+        public string Role { get; set; } = "Manager";
         public string GetPermissions() => "Manage Shifts, View Reports";
     }
 }

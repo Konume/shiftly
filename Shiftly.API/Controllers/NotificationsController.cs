@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Shiftly.API.Models; // Assuming Notification model is defined in this namespace
 namespace Shiftly.Controllers
 {
     [ApiController]
@@ -13,6 +13,6 @@ namespace Shiftly.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult AddNotification([FromBody] NotificationDto dto) => Ok();
+        public IActionResult AddNotification([FromBody] Notification dto) => Ok();
     }
 }

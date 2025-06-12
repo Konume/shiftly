@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Shiftly.API.Models; // Assuming SwapRequest model is defined in this namespace
 
 namespace Shiftly.Controllers
 {
@@ -14,7 +15,7 @@ namespace Shiftly.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult CreateSwapRequest([FromBody] SwapRequestDto dto) => Ok();
+        public IActionResult CreateSwapRequest([FromBody] SwapRequest dto) => Ok();
 
         [Authorize(Roles = "Manager")]
         [HttpPut("{id}/approve")]

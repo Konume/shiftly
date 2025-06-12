@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Shiftly.API.Models; 
 
 namespace Shiftly.Controllers
 {
@@ -14,7 +15,7 @@ namespace Shiftly.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult CreateLeaveRequest([FromBody] LeaveRequestDto dto) => Ok();
+        public IActionResult CreateLeaveRequest([FromBody] LeaveRequest dto) => Ok();
 
         [Authorize(Roles = "Manager")]
         [HttpPut("{id}/approve")]

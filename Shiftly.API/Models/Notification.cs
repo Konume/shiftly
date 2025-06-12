@@ -1,6 +1,6 @@
 using System;
 
-namespace ShiftlyAPI.Models
+namespace Shiftly.API.Models
 {
     public class Notification
     {
