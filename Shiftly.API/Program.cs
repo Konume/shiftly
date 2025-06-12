@@ -5,9 +5,8 @@ using MongoDB.Driver;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Shiftly.API.Settings;
 using DotNetEnv;
-
+using Shiftly.API.Settings;
 
 DotNetEnv.Env.Load();
 var builder = WebApplication.CreateBuilder(args);
