@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shiftly.API.Settings;
+using DotNetEnv;
 
 
 DotNetEnv.Env.Load();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OPyEejHOZXY=",
+  "dgSpecHash": "mBaeVJqt2qc=",
   "success": true,
-  "projectFilePath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\shiftly.API\\Shiftly.API.csproj",
+  "projectFilePath": "G:\\Nowy folder\\semestr6\\kuciapski\\app\\Shiftly.API\\Shiftly.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zmsz0\\.nuget\\packages\\azure.core\\1.46.1\\azure.core.1.46.1.nupkg.sha512",
     "C:\\Users\\zmsz0\\.nuget\\packages\\azure.core.amqp\\1.3.1\\azure.core.amqp.1.3.1.nupkg.sha512",
